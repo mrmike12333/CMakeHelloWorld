@@ -1,4 +1,9 @@
 #include <iostream>
+
+/**
+ * @brief An exmaple dummy library that does nothing.
+ * 
+ */
 namespace ExampleLibrary
 {
     /**
