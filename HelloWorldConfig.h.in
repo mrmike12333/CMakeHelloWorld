@@ -1,0 +1,8 @@
+/*
+    The config file used by CMAKE 
+    to setup global project-wide variables.
+*/ 
+#define PROJECT_NAME "@CMAKE_PROJECT_NAME@"
+#define PROJECT_DESCRIPTION "@CMAKE_PROJECT_DESCRIPTION@"
+#define VERSION_MAJOR @HelloWorld_VERSION_MAJOR@
+#define VERSION_MINOR @HelloWorld_VERSION_MINOR@
