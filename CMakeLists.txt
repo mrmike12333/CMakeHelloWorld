@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.22)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+# Interface library to define C++ info.
+# Linking to this library will include these requirements.
+add_library(compiler_flags INTERFACE)
+target_compile_features(compiler_flags INTERFACE cxx_std_17)
 
 project(
     HelloWorld 
@@ -18,7 +20,9 @@ add_subdirectory(ExampleLib)
 target_link_libraries(
     HelloWorld
     PUBLIC
-    ExampleLib)
+    ExampleLib
+    compiler_flags
+    )
 
 target_include_directories(
     HelloWorld PUBLIC 

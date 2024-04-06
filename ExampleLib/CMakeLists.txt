@@ -1,6 +1,4 @@
 cmake_minimum_required(VERSION 3.22)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 add_library(
     ExampleLib
@@ -10,4 +8,10 @@ add_library(
 target_include_directories(
     ExampleLib
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
+    )
+
+    target_link_libraries(
+        ExampleLib
+        PUBLIC
+        compiler_flags
     )
