@@ -13,8 +13,15 @@ configure_file(HelloWorldConfig.h.in HelloWorldConfig.h)
 
 add_executable(HelloWorld Source/main.cpp)
 
+add_subdirectory(ExampleLib)
+
+target_link_libraries(
+    HelloWorld
+    PUBLIC
+    ExampleLib)
+
 target_include_directories(
-    HelloWorld 
-    PUBLIC 
+    HelloWorld PUBLIC 
     ${PROJECT_BINARY_DIR}
+    ${PROJECT_SOURCE_DIR}/ExampleLib
     )

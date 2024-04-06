@@ -1,5 +1,6 @@
 #include <iostream>
 #include "HelloWorldConfig.h"
+#include "LibraryFile.h"
 
 /**
  * @brief Output CMAKE config information to the console.
@@ -26,6 +27,8 @@ int main()
 
     for (int i = 0; i < *myInt; ++i)
         std::cout << "Hello, World!" << std::endl;
+
+    ExampleLibrary::HelloWorld();   
 
     return 0;
 }
